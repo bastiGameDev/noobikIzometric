@@ -27,8 +27,15 @@ public class MovementController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            // Активируем анимацию бега
-            animator.SetBool("isRunning", true);
+            if (animator.GetBool("isCarry") == false)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isCarryRunning", true);
+            }
+            
 
             // Поворачиваем персонажа в направлении движения
             Quaternion targetRotation = Quaternion.LookRotation(direction);
@@ -39,8 +46,16 @@ public class MovementController : MonoBehaviour
         }
         else
         {
+
             // Отключаем анимацию бега, если нет движения
-            animator.SetBool("isRunning", false);
+            if (animator.GetBool("isCarry") == true)
+            {
+                animator.SetBool("isCarryRunning", false);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
         }
     }
 }
