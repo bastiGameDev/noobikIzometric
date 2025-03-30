@@ -289,7 +289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 1c35007f144e58f4981ea15217eda251, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 279bca332ea92174498e0453c94fa6e4, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryPoint: {fileID: 1611298434}
-  pickUpRange: 2
+  pickUpRange: 4
   pickableLayer:
     serializedVersion: 2
     m_Bits: 64
