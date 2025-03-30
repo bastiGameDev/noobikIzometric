@@ -33,11 +33,16 @@ public class Sink : MonoBehaviour
     {
         if (carrySystem != null && carrySystem.GetCarriedObject() != null)
         {
-            carriedObject = carrySystem.GetCarriedObject();
-        }
-        else
-        {
-            Debug.LogError("Ќе удалось получить carriedObject!");
+            GameObject heldObject = carrySystem.GetCarriedObject();
+            if (heldObject.layer == LayerMask.NameToLayer("VegetableBox"))
+            {
+                carriedObject = heldObject;
+                Debug.Log("ящик с овощами готов к мытью!");
+            }
+            else
+            {
+                Debug.Log("Ётот объект нельз€ помыть в раковине!");
+            }
         }
     }
 
@@ -66,7 +71,7 @@ public class Sink : MonoBehaviour
 
         objectRenderer.enabled = false; // —крываем объект
 
-        animator.SetBool("isCarry", false);
+        animator.SetBool("isCarry",false);
 
         float timer = 0f;
         

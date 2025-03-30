@@ -4,7 +4,6 @@ public class CarrySystem : MonoBehaviour
 {
     [SerializeField] private Transform carryPoint;
     [SerializeField] private float pickUpRange = 2f;
-    [SerializeField] private LayerMask pickableLayer;
     public GameObject carriedObject;
     [SerializeField] private Animator animator;
 
@@ -31,7 +30,8 @@ public class CarrySystem : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, pickableLayer))
+        // ”бираем использование LayerMask и провер€ем только теги
+        if (Physics.Raycast(ray, out hit))
         {
             GameObject hitObject = hit.collider.gameObject;
             if (hitObject.CompareTag("Pickable"))

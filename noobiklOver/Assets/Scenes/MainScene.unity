@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dropPoint: {fileID: 365202751}
   washTime: 2
+  animator: {fileID: 554242919}
   teleportTo: {x: -29.222, y: 5.91, z: -36.313}
 --- !u!65 &1189687315
 BoxCollider:
@@ -2317,7 +2318,7 @@ GameObject:
   - component: {fileID: 1711813854257460997}
   - component: {fileID: 1379478403}
   - component: {fileID: 3469287838318281681}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: crate_potatoes
   m_TagString: Pickable
   m_Icon: {fileID: 0}
@@ -3292,9 +3293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carryPoint: {fileID: 1611298434}
   pickUpRange: 4
-  pickableLayer:
-    serializedVersion: 2
-    m_Bits: 64
   carriedObject: {fileID: 0}
   animator: {fileID: 554242919}
 --- !u!1 &8453153365061325701
